@@ -26,10 +26,11 @@ I implemented a Latent Diffusion Inpainting pipeline using the Stable Diffusion 
 
 ## 2. Challenges & Solutions
 
-Challenge,Impact on Output,Technical Solution
-Automated Cloth Detection,"Bounding boxes were imprecise, often masking parts of the skin or the background.",Manual Masking Interface: Pivoted to a Gradio-based brush tool to allow for pixel-perfect boundary definition.
-Complex Text Inputs,"Stylistic or highly specific garment descriptions caused texture blurring or ""hallucinations.""","Prompt Engineering: Implemented a system that automatically appends quality modifiers (e.g., ""high quality, realistic fabric texture"") to user inputs."
-Anchor Pixel Bias,"The AI tried to ""blend"" new clothes with the old suit, creating hybrid outfits (e.g., a red tie on a grey suit).","High Denoising & Negative Prompting: Set strength=1.0 to overwrite original pixels and added a negative_prompt to explicitly block ""suit"" and ""tie"" textures."
+|Challenge|Impact on Output|Technical Solution
+|-------------|---------------------|
+|Automated Cloth Detection|"Bounding boxes were imprecise, often masking parts of the skin or the background."|Manual Masking Interface: Pivoted to a Gradio-based brush tool to allow for pixel-perfect boundary definition.|
+|Complex Text Inputs|"Stylistic or highly specific garment descriptions caused texture blurring or ""hallucinations."""|"Prompt Engineering: Implemented a system that automatically appends quality modifiers (e.g., ""high quality, realistic fabric texture"") to user inputs."|
+|Anchor Pixel Bias|"The AI tried to ""blend"" new clothes with the old suit, creating hybrid outfits (e.g., a red tie on a grey suit)."|"High Denoising & Negative Prompting: Set strength=1.0 to overwrite original pixels and added a negative_prompt to explicitly block ""suit"" and ""tie"" textures."|
 
 ## 3. What I would improve
 Automated Segmentation - Integrate Segment Anything Model (SAM) or MediaPipe to automatically detect clothes without user brushing.
