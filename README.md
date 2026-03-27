@@ -26,7 +26,7 @@ I implemented a Latent Diffusion Inpainting pipeline using the Stable Diffusion 
 
 ## 2. Challenges & Solutions
 
-### 🛠️ Challenges & Technical Solutions
+### Challenges & Technical Solutions
 
 | Challenge | Impact on Output | Technical Solution |
 | :--- | :--- | :--- |
