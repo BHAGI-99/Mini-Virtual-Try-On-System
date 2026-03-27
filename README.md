@@ -14,7 +14,8 @@ This system uses a **Stable Diffusion Inpainting Pipeline** (v1.5).
 - **UI:** Gradio
 - **Model:** `runwayml/stable-diffusion-inpainting`
 
-## 📊Results
+## Results
 | Input Image | Output (New Outfit) |
 |-------------|---------------------|
 | ![Input](input.jpg) | ![Output](output_image.jpg) |
+| ![Output](web_interface.jpg) |
